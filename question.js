@@ -1,4 +1,5 @@
 const quizletIds = [705201314];
+let correctAnswer;
 
 main();
 
@@ -8,8 +9,21 @@ async function main()
   let cards = await fetchQuizletTerms(quizletId);
   let testCard = randomElementFrom(cards);
   let term = getTermFromCard(testCard);
-  let definition = getDefinitionFromCard(testCard);
-  console.log(term, definition);
+  correctAnswer = getDefinitionFromCard(testCard);
+  populatePrompt(term);
+}
+
+function populatePrompt(str)
+{
+  let prompt = document.getElementById("prompt");
+  prompt.innerHTML = str;
+}
+
+function checkAnswer()
+{
+  alert(
+    "k"
+  );
 }
 
 function getTermFromCard(card)

@@ -6,10 +6,12 @@
 
 <body>
     <div id="question">
-        <h3 id="prompt"></h3>
-        <textarea id="answer" rows="4" cols="50">
-            
-        </textarea>
-        <button action="checkAnswer">Check</button>
+            <form onsubmit="checkAnswer()">
+            <h3 id="prompt"></h3>
+            <textarea id="answer" rows="4" cols="50">
+                
+            </textarea>
+            <button type="submit">Check</button>
+        </form>
     </div>
 </body>
